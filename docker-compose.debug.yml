@@ -3,6 +3,7 @@ version: '3.4'
 services:
   docspell-addon-example:
     image: docspell-addon-example
+    container_name: docspell-addon-example
     build:
       context: .
       dockerfile: ./Dockerfile
