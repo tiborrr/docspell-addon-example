@@ -1,6 +1,6 @@
 meta:
   name: "docspell-addon-example"
-  version: "0.4.0"
+  version: "0.7.0"
   description: |
     This is a minimal example of a docspell addon. It does nothing but print Hello and the argument that was passed to it.
 triggers:
