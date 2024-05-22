@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   docspell-addon-example:
-    image: docspell-addon-example
+    image: tiborrr/docspell-addon-example:latest
     container_name: docspell-addon-example
     build:
       context: .

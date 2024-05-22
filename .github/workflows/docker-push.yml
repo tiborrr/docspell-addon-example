@@ -26,5 +26,6 @@ jobs:
       with:
         push: true
         tags: |
-          yourusername/yourimagename:latest
-          yourusername/yourimagename:${{ github.ref_name }}
+          tiborrr/docspell-addon-example:latest
+          tiborrr/docspell-addon-example:${{ github.ref_name }}
+
