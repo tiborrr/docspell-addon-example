@@ -1,0 +1,1 @@
+# docspell-addon-example
