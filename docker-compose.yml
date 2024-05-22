@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  docspelladdonexample:
-    image: docspelladdonexample
+  docspell-addon-example:
+    image: docspell-addon-example
     build:
       context: .
       dockerfile: ./Dockerfile
