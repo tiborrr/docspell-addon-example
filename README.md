@@ -16,15 +16,10 @@ Before you can use this addon with Docspell, ensure you have the following:
 
 To install this addon, follow these steps:
 
-1. **Download the Latest Release:**
-   - Navigate to the [latest release](https://github.com/tiborr/docspell-addon-example/releases/latest) of this addon on GitHub.
-   - Download the `docspell-addon-example.zip` file attached to the release.
-
-2. **Install the Addon in Docspell:**
-   - Log into your Docspell web interface.
-   - Go to _Manage Data -> Addons -> New_.
-   - Insert the URL to the `docspell-addon-example.zip` file you just downloaded.
-   - Docspell will handle the extraction and installation of the addon.
+- Log into your Docspell web interface.
+- Go to _Manage Data -> Addons -> New_.
+- Insert `https://github.com/tiborrr/docspell-addon-example/releases/latest/download/docspell-addon-example.zip`.
+- Docspell will handle the extraction and installation of the addon.
 
 ## Usage
 
