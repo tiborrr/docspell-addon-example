@@ -28,4 +28,7 @@ jobs:
         tags: |
           tiborrr/docspell-addon-example:latest
           tiborrr/docspell-addon-example:${{ github.ref_name }}
+    - name: Run Python tests
+      run: |
+        python -m unittest test/main_test.py
 
