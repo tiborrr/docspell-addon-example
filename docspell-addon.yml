@@ -8,7 +8,7 @@ triggers:
 runner:
   docker:
     enable: true
-    image: tiborrr/docspell-addon-example:latest
+    image: tiborrr/docspell-addon-example:0.7.0
 options:
   networking: false
   collectOutput: true
