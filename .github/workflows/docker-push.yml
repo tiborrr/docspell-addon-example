@@ -26,8 +26,8 @@ jobs:
       with:
         push: true
         tags: |
-          tiborrr/docspell-addon-example:latest
-          tiborrr/docspell-addon-example:${{ github.ref_name }}
+          ${{ secrets.DOCKER_IMAGE_NAME }}:latest
+          ${{ secrets.DOCKER_IMAGE_NAME }}:${{ github.ref_name }}
     - name: Run Python tests
       run: |
         python -m unittest test/main_test.py
