@@ -1,6 +1,6 @@
 meta:
   name: "docspell-addon-example"
-  version: "0.9.0"
+  version: "1.0.0"
   description: |
     This is a minimal example of a docspell addon. It does nothing but print Hello and the argument that was passed to it.
 triggers:
@@ -8,7 +8,7 @@ triggers:
 runner:
   docker:
     enable: true
-    image: tiborrr/docspell-addon-example:0.9.0
+    image: tiborrr/docspell-addon-example:1.0.0
 options:
   networking: false
   collectOutput: true
