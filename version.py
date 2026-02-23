@@ -12,6 +12,10 @@ from pathlib import Path
 _ADDON_YML = Path(__file__).parent / "docspell-addon.yml"
 _text = _ADDON_YML.read_text()
 
-ADDON_NAME: str = re.search(r'name:\s*["\']([^"\']+)["\']', _text).group(1)
-VERSION: str = re.search(r'version:\s*["\']([^"\']+)["\']', _text).group(1)
+_name_match = re.search(r'name:\s*["\']([^"\']+)["\']', _text)
+_version_match = re.search(r'version:\s*["\']([^"\']+)["\']', _text)
+if _name_match is None or _version_match is None:
+    raise ValueError("Could not parse name or version from docspell-addon.yml")
+ADDON_NAME: str = _name_match.group(1)
+VERSION: str = _version_match.group(1)
 ADDON_DIR: str = f"addons/{ADDON_NAME}-{VERSION}"
