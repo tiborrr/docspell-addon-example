@@ -44,6 +44,25 @@ The version is defined in `docspell-addon.yml`. When creating a release, update 
 
 The `version.py` module reads from this file so tests and other tooling stay in sync.
 
+## Testing addon env vars
+
+This addon logs all `DOCSPELL_TEST_*` environment variables to stderr. You can use it to verify that [addon env var config](https://docspell.org/docs/addons/control/#environment-variables) works. Add to your joex config:
+
+```hocon
+docspell.joex.addons.configs = [
+  {
+    name = "docspell-addon-example"
+    enabled = true
+    envs = [
+      { name = "DOCSPELL_TEST_FOO", value = "bar" }
+      { name = "DOCSPELL_TEST_BAZ", value-from = { env = "DS_TEST_BAZ", optional = true } }
+    ]
+  }
+]
+```
+
+Run the addon and check the joex logs to see the injected vars.
+
 ## Customization
 
 Clone the repository, modify the source code, and rebuild. See the [Docspell addon documentation](https://docspell.org/docs/addons/writing/) for the full interface.
