@@ -7,7 +7,7 @@ class TestContainerResponse(unittest.TestCase):
         result = subprocess.run(['docker', 'run', 'tiborrr/docspell-addon-example', 'John'], capture_output=True, text=True)
         
         # Check if the output from the container is as expected
-        self.assertEqual(result.stdout.strip(), 'Hello John')
+        self.assertEqual(result.stderr.strip(), 'Hello John')
 
 if __name__ == '__main__':
     unittest.main()
