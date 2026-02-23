@@ -1,0 +1,20 @@
+{
+  "id": "UyZ-item-id",
+  "name": "yearly report 2021",
+  "collective": 1,
+  "source": "webapp",
+  "tags": ["tag-1"],
+  "assumedTags": ["invoice"],
+  "attachments": [
+    {
+      "id": "Apa-attach-id",
+      "name": "report_year_2021.pdf",
+      "position": 0,
+      "content": "extracted text…",
+      "language": "eng",
+      "pages": 2
+    }
+  ],
+  "assumedCorrOrg": {"id": "yf7XiqWp", "name": "Acme AG"},
+  "assumedConcPerson": {"id": "7XLiAkeY", "name": "Derek Jeter"}
+}
