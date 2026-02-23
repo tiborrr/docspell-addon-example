@@ -120,7 +120,7 @@ class TestDocspellAddonInterface(unittest.TestCase):
                     "run",
                     "--rm",
                     "--mount", f"type=bind,source={work_dir},target=/mnt/work",
-                    "--env", "ADDON_DIR=addons/docspell-addon-example-1.1.0",
+                    "--env", "ADDON_DIR=addons/docspell-addon-example-1.2.0",
                     "--env", "TMP_DIR=/mnt/work/temp",
                     "--env", "TMPDIR=/mnt/work/temp",
                     "--env", "OUTPUT_DIR=/mnt/output",
