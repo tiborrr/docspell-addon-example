@@ -25,7 +25,10 @@ def load_user_input(path: str) -> dict | None:
         content = f.read().strip()
         if not content:
             return None
-        return json.loads(content)
+        try:
+            return json.loads(content)
+        except json.JSONDecodeError:
+            return content
 
 
 def collect_addon_context() -> dict:
