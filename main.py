@@ -4,16 +4,17 @@ import json
 import os
 import sys
 from pathlib import Path
+from typing import Any
 
 
-def load_json_file(path: str | None) -> dict | list | None:
+def load_json_file(path: str | None) -> dict[str, Any] | list[Any] | None:
     if not path or not Path(path).is_file():
         return None
     with open(path, encoding="utf-8") as f:
         return json.load(f)
 
 
-def load_user_input(path: str) -> dict | None:
+def load_user_input(path: str) -> dict[str, Any] | None:
     if not path:
         return None
     resolved = Path(path)
@@ -28,10 +29,10 @@ def load_user_input(path: str) -> dict | None:
         try:
             return json.loads(content)
         except json.JSONDecodeError:
-            return content
+            return None
 
 
-def collect_addon_context() -> dict:
+def collect_addon_context() -> dict[str, Any]:
     """Gather all data Docspell provides to an addon."""
     user_input_path = sys.argv[1] if len(sys.argv) > 1 else ""
 
@@ -62,7 +63,7 @@ def _log(msg: str) -> None:
     print(msg, file=sys.stderr)
 
 
-def log_context(ctx: dict) -> None:
+def log_context(ctx: dict[str, Any]) -> None:
     """Log all available context to stderr for debugging."""
     _log("=== Docspell addon context ===")
     _log(f"User input file: {ctx['user_input_file']}")
@@ -108,6 +109,11 @@ def log_context(ctx: dict) -> None:
     _log("\n--- dsc session (when configured) ---")
     _log(f"DSC_DOCSPELL_URL: {ctx['dsc_docspell_url']}")
     _log(f"DSC_SESSION: {ctx['dsc_session']}")
+
+    _log("\n--- DOCSPELL_TEST_* env vars ---")
+    for key in sorted(os.environ):
+        if key.startswith("DOCSPELL_TEST_"):
+            _log(f"{key}={os.environ[key]}")
 
 
 def main() -> None:

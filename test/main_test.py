@@ -32,7 +32,7 @@ def _chmod_for_container(work: Path) -> None:
 
 class TestDocspellAddonInterface(unittest.TestCase):
     def test_addon_uses_all_docspell_data(self) -> None:
-        subprocess.run(["docker", "compose", "build"], check=True, capture_output=True)
+        _ = subprocess.run(["docker", "compose", "build"], check=True, capture_output=True)
 
         # Ensure addon dir exists (ADDON_DIR = addons/name-version)
         addon_dir = WORK_DIR / version.ADDON_DIR
@@ -102,4 +102,4 @@ class TestDocspellAddonInterface(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main()
+    _ = unittest.main()
