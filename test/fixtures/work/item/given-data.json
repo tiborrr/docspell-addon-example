@@ -1,0 +1,7 @@
+{
+  "collective": 1,
+  "language": "eng",
+  "tags": ["given-tag-1"],
+  "skipDuplicate": true,
+  "customData": {"my-id": 42}
+}
