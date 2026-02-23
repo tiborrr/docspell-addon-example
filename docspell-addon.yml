@@ -1,14 +1,17 @@
 meta:
   name: "docspell-addon-example"
-  version: "1.1.0"
+  version: "1.2.0"
   description: |
-    This is a minimal example of a docspell addon. It does nothing but print Hello and the argument that was passed to it.
+    Example addon demonstrating all data Docspell provides: user input file,
+    ADDON_DIR, TMP_DIR, OUTPUT_DIR, CACHE_DIR, ITEM_DATA_JSON, ITEM_ARGS_JSON,
+    ITEM_ORIGINAL_JSON, ITEM_PDF_JSON, ITEM_ORIGINAL_DIR, ITEM_PDF_DIR, and dsc session.
+    Logs everything to stderr and returns empty JSON to stdout.
 triggers:
   - final-process-item
 runner:
   docker:
     enable: true
-    image: tiborrr/docspell-addon-example:1.1.0
+    image: tiborrr/docspell-addon-example:1.2.0
 options:
   networking: false
   collectOutput: true
