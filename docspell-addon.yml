@@ -1,6 +1,6 @@
 meta:
   name: "docspell-addon-example"
-  version: "1.4.0"
+  version: "1.5.0"
   description: |
     Example addon demonstrating all data Docspell provides: user input file,
     ADDON_DIR, TMP_DIR, OUTPUT_DIR, CACHE_DIR, ITEM_DATA_JSON, ITEM_ARGS_JSON,
@@ -11,7 +11,7 @@ triggers:
 runner:
   docker:
     enable: true
-    image: tiborrr/docspell-addon-example:1.4.0
+    image: tiborrr/docspell-addon-example:1.5.0
 options:
   networking: false
   collectOutput: true
